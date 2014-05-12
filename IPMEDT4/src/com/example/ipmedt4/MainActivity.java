@@ -12,11 +12,7 @@ import android.view.ViewGroup;
 import android.os.Build;
 
 public class MainActivity extends ActionBarActivity {
-<<<<<<< HEAD
 
-=======
-//duhduahdiuashiusiudaiusduagdiugaiugdau//
->>>>>>> 29f1f43a24fac25c08b3cf9aa055bf1340d896e7
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
