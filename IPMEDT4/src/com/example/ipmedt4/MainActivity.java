@@ -1,22 +1,26 @@
 package com.example.ipmedt4;
 
+import hsleiden.app.comon.Opdrachtgevers;
+
+import com.example.comonnavigation.R;
+
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.View.OnClickListener;
+import android.widget.ImageButton;
 import android.os.Build;
 
 public class MainActivity extends ActionBarActivity {
-<<<<<<< HEAD
 
-=======
-//duhduahdiuashiusiudaiusduagdiugaiugdau//
->>>>>>> 29f1f43a24fac25c08b3cf9aa055bf1340d896e7
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -47,6 +51,23 @@ public class MainActivity extends ActionBarActivity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	//de buttonListener methode zorgt ervoor dat er een nieuwe activity (pagina in de app) wordt aangeroepen wanneer
+		//op een van de knoppen op de menu pagina wordt gedrukt.
+		public void buttonListener()  
+		{
+			final Context context = this;
+			//de knop voor de betrokken opdrachtgevers
+			opdrachtgeverButton = (ImageButton) findViewById(R.id.opdrachtgeverButton);
+			opdrachtgeverButton.setOnClickListener(new OnClickListener()
+			{
+				@Override
+				public void onClick(View arg0) 
+				{
+					Intent intent = new Intent(context, Opdrachtgevers.class);
+	                startActivity(intent); 
+				}
+			});
 
 	/**
 	 * A placeholder fragment containing a simple view.
